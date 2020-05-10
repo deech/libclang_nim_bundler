@@ -1,0 +1,5 @@
+#+TITLE: Libclang Nim Bundler
+
+A [[https://nim-lang.org/][Nim]] script that can be used at build time to download and build [[https://clang.llvm.org/docs/Tooling.html][Libclang]] using[[https://github.com/deech/libclang-static-build][the libclang static build cmake project]]. It is a separate repo because the Nim package manager [[https://github.com/nim-lang/nimble][Nimble]] does not have build time dependencies.
+
+Projects that use this script must also clone the [[https://github.com/deech/nimscript_utils][the nimscript_utils repo]] into this directory before running it.
