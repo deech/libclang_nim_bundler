@@ -26,10 +26,10 @@ let
   rootDir* = os.getTempDir() / "nim" / "third-party"
   includePath* = rootDir / libclangDir / "include"
   libraryPath* = rootDir / libclangDir / "lib"
-  libclangStaticBindingsCommit* = "479a77de502054d759b50c9c4d8a33d5b8fe201c"
+  libclangStaticBindingsCommit* = "e4a81120fa1e13ed712fcbadca785bef30bde37d"
 
 proc build*() =
-  if not ((system.existsFile(rootDir / libclangDir / "lib" / "libclang_static_bundled.a")) or (system.existsDir (rootDir / libclangDir / "include" / "clang-c"))):
+  if not ((system.existsFile(rootDir / libclangDir / "lib" / "libclang_bundled.a")) or (system.existsDir (rootDir / libclangDir / "include" / "clang-c"))):
     if (not system.existsDir(rootDir)):
       mkdir rootDir
     let dir = downloadGithubCommit(
